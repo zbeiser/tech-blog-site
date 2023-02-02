@@ -51,6 +51,29 @@ router.get('/blogpost/:id', async (req, res) => {
   }
 });
 
+// Take user to commenting page
+router.get('/comment/:id', withAuth, async (req, res) => {
+  try {
+    const blogpostData = await Blogpost.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+      ],
+    });
+
+    const blogpost = blogpostData.get({ plain: true });
+
+    res.render('comment', {
+      ...blogpost,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // Take user to login page
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
