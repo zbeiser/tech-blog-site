@@ -2,6 +2,26 @@ const router = require('express').Router();
 const { Blogpost, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
+//// TEST ROUTE
+// router.get('/', async (req, res) => {
+//   try {
+//     const blogpostData = await Blogpost.findAll({
+//       include: [
+//         {
+//           model: User,
+//         },
+//         {
+//           model: Comment,
+//         }
+//       ],
+//     });
+
+//     res.status(200).json(blogpostData);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
 // Get all blog posts to front page
 router.get('/', async (req, res) => {
   try {

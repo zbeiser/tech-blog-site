@@ -12,13 +12,15 @@
 <body>
   <div>
     <header>
+      <h1>
+        <a href="/">Tech Blog</a>
+      </h1>
       <nav>
-        <a href="/">home</a>
         {{#if logged_in}}
         <a href="/dashboard">dashboard</a> |
-        <button id="logout">logout</button>
+        <a href="/api/users/logout">logout</a> |
         {{else}}
-        <a href="/login">login</a>
+        <a href="/api/users/login">login</a>
         {{/if}}
       </nav>
     </header>
