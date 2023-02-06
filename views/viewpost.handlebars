@@ -1,0 +1,26 @@
+<div>
+  <div>
+    <h2>
+      {{title}}
+    </h2>
+      <p>Posted by {{user.username}} on {{format_date date_posted}}</p>
+  </div>
+  <div>
+    <p>
+      {{description}}
+    </p>
+  </div>
+  <div>
+    <a href="/comment/{{id}}"></a>
+  </div>
+</div>
+{{#each comments as |comment| }}
+  <div>
+    <p>
+      {{comment.description}}
+    </p>
+    <p>
+      - Posted by {{user}} on {{format_date comment.date_posted}}
+    </p>
+  </div>
+{{/each}}

@@ -1,5 +1,15 @@
 {{#each blogposts as |blogpost| }}
 <div>
-  
+  <div>
+    <h2>
+      <a href="/blogpost/{{blogpost.id}}">{{blogpost.title}}</a>
+    </h2>
+      <p>Posted by {{blogpost.user.username}} on {{format_date blogpost.date_posted}}</p>
+  </div>
+  <div>
+    <p>
+      {{blogpost.description}}
+    </p>
+  </div>
 </div>
 {{/each}}

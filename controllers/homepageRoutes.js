@@ -22,6 +22,44 @@ const withAuth = require('../utils/auth');
 //   }
 // });
 
+// router.get('/', async (req, res) => {
+//   try {
+//     const blogpostData = await User.findAll({
+//       include: [
+//         {
+//           model: Blogpost,
+//         },
+//         {
+//           model: Comment,
+//         }
+//       ],
+//     });
+
+//     res.status(200).json(blogpostData);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
+// router.get('/', async (req, res) => {
+//   try {
+//     const blogpostData = await Comment.findAll({
+//       include: [
+//         {
+//           model: User,
+//         },
+//         {
+//           model: Blogpost,
+//         }
+//       ],
+//     });
+
+//     res.status(200).json(blogpostData);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
 // Get all blog posts to front page
 router.get('/', async (req, res) => {
   try {
