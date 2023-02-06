@@ -11,7 +11,7 @@
     </p>
   </div>
   <div>
-    <a href="/comment/{{id}}"></a>
+    <a href="/comment/{{id}}">Make a comment</a>
   </div>
 </div>
 {{#each comments as |comment| }}
@@ -20,7 +20,7 @@
       {{comment.description}}
     </p>
     <p>
-      - Posted by {{user}} on {{format_date comment.date_posted}}
+      - Posted by  on {{format_date comment.date_posted}}
     </p>
   </div>
 {{/each}}
