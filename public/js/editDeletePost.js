@@ -23,3 +23,25 @@ const editPostFormHandler = async (event) => {
 document
   .querySelector('#editPostForm')
   .addEventListener('submit', editPostFormHandler);
+
+  const deletePostFormHandler = async (event) => {
+    event.preventDefault();
+  
+    const id = window.location.toLocaleString()
+      .charAt(window.location.toLocaleString().length-1);
+    if (id) {
+      const response = await fetch(`/api/blogposts/${id}`, {
+        method: 'DELETE',
+      });
+  
+      if (response.ok) {
+        document.location.replace("/dashboard");
+      } else {
+        alert("Something went wrong!");
+      }
+    }
+  };
+
+  document
+  .querySelector('#deletePostButton')
+  .addEventListener('click', deletePostFormHandler);
