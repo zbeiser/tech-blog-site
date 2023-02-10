@@ -1,0 +1,6 @@
+{{#each blogposts as |blogpost| }}
+<button onclick="window.location.href='/dashboard/editpost/{{blogpost.id}}';">
+  <p>{{blogpost.title}}</p>
+  <p>{{format_date blogpost.date_posted}}</p>
+</button>
+{{/each}}
