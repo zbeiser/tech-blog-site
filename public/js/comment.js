@@ -4,8 +4,6 @@ const commentFormHandler = async (event) => {
   const blogpost_id = window.location.toLocaleString()
     .charAt(window.location.toLocaleString().length-1);
   const description = document.querySelector('#commentText').value;
-  console.log(blogpost_id);
-  console.log(description);
   if (description) {
     const response = await fetch('/api/comments/', {
       method: 'POST',
