@@ -94,6 +94,7 @@ router.get('/blogpost/:id', async (req, res) => {
         },
         {
           model: Comment,
+          include: User
         }
       ],
     });
