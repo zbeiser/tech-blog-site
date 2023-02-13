@@ -9,13 +9,13 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
-  <div>
-    <header>
-      <h1>
+<body class="bg-dark">
+  <div class="container-fluid bg-dark text-white">
+    <header class="row d-flex p-3">
+      <h1 class="col text-center">
         <a href="/">Tech Blog</a>
       </h1>
-      <nav>
+      <nav class="col d-flex justify-content-evenly align-items-center h3">
         {{#if logged_in}}
         <a href="/dashboard">dashboard</a>
         <button class="no-button" id="logout">logout</button>
