@@ -1,17 +1,17 @@
-<div>
-  <form id="editPostForm">
+<div class="container-lg my-5 border p-3">
+  <form class="form-group" id="editPostForm">
     <h2>Edit Post</h2>
-    <label for="editPostTitle">Title:</label>
+    <label class="h4" for="editPostTitle">Title:</label>
     <br>
-    <input id="editPostTitle" type="text" name="editPostTitle" value="{{title}}">
+    <input class="form-control" id="editPostTitle" type="text" name="editPostTitle" value="{{title}}">
     <br>
-    <label for="editPostDescription">Description:</label>
+    <label class="h4" for="editPostDescription">Description:</label>
     <br>
-    <textarea name="editPostDescription" id="editPostDescription" cols="30" rows="10">{{description}}</textarea>
+    <textarea class="form-control" name="editPostDescription" id="editPostDescription" cols="30" rows="10">{{description}}</textarea>
     <br><br>
-    <input type="submit" value="Update Post">
+    <input class="btn btn-light py-1" type="submit" value="Update Post">
     <br>
-    <button id="deletePostButton">Delete Post</button>
+    <button class="btn btn-light mt-4 py-1" id="deletePostButton">Delete Post</button>
   </form>
 </div>
 
