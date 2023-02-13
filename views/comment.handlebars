@@ -1,21 +1,21 @@
-<div>
-  <div>
-    <h2>
+<div class="container-lg my-5 border p-3">
+  <div class="row">
+    <h2 class="col">
       {{title}}
     </h2>
-    <p>Posted by {{user.username}} on {{format_date date_posted}}</p>
+    <p class="col m-0 d-flex justify-content-end align-items-center">Posted by {{user.username}} on {{format_date date_posted}}</p>
   </div>
   <div>
-    <p>
+    <p class="p-3">
       {{description}}
     </p>
   </div>
 </div>
-<div>
-  <form id="commentForm">
-    <label for="commentText">Comment:</label>
-    <input id="commentText" type="text" name="commentText">
-    <input type="submit" value="Submit">
+<div class="container-lg my-5 border p-3">
+  <form class="form-group" id="commentForm">
+    <label class="h3" for="commentText">Comment:</label>
+    <input class="form-control" id="commentText" type="text" name="commentText">
+    <input class="btn btn-light mt-4 py-1" type="submit" value="Submit">
   </form>
 </div>
 
