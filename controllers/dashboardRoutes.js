@@ -30,7 +30,9 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 router.get('/newpost', withAuth, (req, res) => {
-  res.render('newpost');
+  res.render('newpost', {
+    logged_in: req.session.logged_in
+  });
 });
 
 // Get edit post page
