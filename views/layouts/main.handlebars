@@ -9,19 +9,19 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body class="bg-dark">
-  <div class="container-fluid bg-dark text-white">
-    <header class="row d-flex p-3">
+<body class="bg-secondary">
+  <div class="container-fluid text-white">
+    <header class="row d-flex p-5 bg-dark">
       <h1 class="col text-center">
-        <a href="/">Tech Blog</a>
+        <a class="text-decoration-none" href="/">Tech Blog</a>
       </h1>
       <nav class="col d-flex justify-content-evenly align-items-center h3">
         {{#if logged_in}}
-        <a href="/dashboard">dashboard</a>
-        <button class="no-button" id="logout">logout</button>
+        <a class="m-2 text-decoration-none" href="/dashboard">dashboard</a>
+        <button class="m-2 no-button text-decoration-none" id="logout">logout</button>
         {{else}}
-        <a href="/login">login</a>
-        <a href="/signup">signup</a>
+        <a class="m-2 text-decoration-none" href="/login">login</a>
+        <a class="m-2 text-decoration-none" href="/signup">signup</a>
         {{/if}}
       </nav>
     </header>

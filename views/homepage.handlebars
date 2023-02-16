@@ -1,8 +1,8 @@
 {{#each blogposts as |blogpost| }}
-<div class="container-lg my-5 border p-3">
+<div class="container-lg my-5 border p-3 bg-dark">
   <div class="row">
     <h2 class="col">
-      <a href="/blogpost/{{blogpost.id}}">{{blogpost.title}}</a>
+      <a class="text-decoration-none" href="/blogpost/{{blogpost.id}}">{{blogpost.title}}</a>
     </h2>
     <p class="col m-0 d-flex justify-content-end align-items-center">Posted by {{blogpost.user.username}} on {{format_date blogpost.date_posted}}</p>
   </div>

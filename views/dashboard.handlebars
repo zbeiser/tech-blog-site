@@ -1,10 +1,10 @@
 {{#each blogposts as |blogpost| }}
-<button class="btn btn-light btn-block" onclick="window.location.href='/dashboard/editpost/{{blogpost.id}}';">
+<button class="btn btn-dark btn-block my-4" onclick="window.location.href='/dashboard/editpost/{{blogpost.id}}';">
   <h2>{{blogpost.title}}</h2>
   <p>{{format_date blogpost.date_posted}}</p>
 </button>
 {{/each}}
 <br><br>
 <div class="d-flex justify-content-center">
-  <button class="btn btn-light" onclick="window.location.href='/dashboard/newpost';">+ New Post</button>
+  <button class="btn btn-lg btn-dark" onclick="window.location.href='/dashboard/newpost';">+ New Post</button>
 </div>
